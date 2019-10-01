@@ -32,8 +32,8 @@ Route::get('/contact-us', function () {
 Route::get('/book', function () {
 
     $barbers = Barber::all();
-    $slots = BookingSlots::all();
-    return view('bookappointment',compact('barbers','slots'));
+    $types = BookingType::all();
+    return view('bookappointment',compact('barbers','types'));
 });
 
 Route::post('/contact/submit','MessageController@submit');

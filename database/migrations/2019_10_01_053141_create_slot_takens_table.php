@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBookingTypesTable extends Migration
+class CreateSlotTakensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateBookingTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('booking_types', function (Blueprint $table) {
+        Schema::create('slot_takens', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('type');
-            $table->string('cost');
-            $table->integer('duration');
-
-
-//            2019-09-23 00:49:59
             $table->timestamps();
+            $table->unsignedBigInteger('booked_id')->unsigned()->index();
+
+            $table->foreign('booked_id')->references('id')->on('bookings')->onDelete('cascade');
 
         });
     }
@@ -33,6 +30,6 @@ class CreateBookingTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('booking_types');
+        Schema::dropIfExists('slot_takens');
     }
 }
