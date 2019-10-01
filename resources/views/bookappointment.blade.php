@@ -11,9 +11,14 @@
                         {{ session()->get('success') }}
                     </div>
                 @endif
+                @if($errors->any())
+                    <div class="alert alert-danger">
+                        <h4>{{$errors->first()}}</h4>
+                    </div>
+                @endif
                 <div class="row">
                     <div class="col-sm-6 col-sm-offset-3">
-                        {!! Form::open(['url'=>'bookappointment/submit']) !!}
+                        {!! Form::open(['url'=>'barber']) !!}
 
                         <div class="form-group">
                             <label> Name</label>

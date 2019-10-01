@@ -29,6 +29,14 @@ Route::get('/contact-us', function () {
     return view('contact_us');
 });
 
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/gallery', function () {
+    return view('gallery');
+});
+
 Route::get('/book', function () {
 
     $barbers = Barber::all();
@@ -41,7 +49,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/barber', 'BookingController@getBarber');
+Route::post('/barber', 'BookingController@getBarber');
 
 
 Route::get('view-records','appointmentcontroller@index');
