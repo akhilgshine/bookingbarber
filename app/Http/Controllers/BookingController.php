@@ -12,6 +12,12 @@ class BookingController extends Controller
 {
     function getBarber(Request $request){
 
+        $validatedData = $request->validate([
+            'name.required' => 'Name is required',
+            'email' => 'required',
+
+        ]);
+
 
         $booking = new Booking;
         $booking->name = $request->input('name');
