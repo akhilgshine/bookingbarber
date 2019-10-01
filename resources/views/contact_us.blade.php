@@ -27,6 +27,11 @@
                                 {{ session()->get('message') }}
                             </div>
                         @endif
+                        @if($errors->any())
+                            <div class="alert alert-danger">
+                                <h4>{{$errors->first()}}</h4>
+                            </div>
+                        @endif
                             {!! Form::open(['url'=>'contact/submit']) !!}
 
                             <div class="row" style="margin-top: 15px;">

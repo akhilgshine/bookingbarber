@@ -17,6 +17,12 @@ class MessageController extends Controller
 //            'author.description' => 'required',
 //        ]);
 
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'message' => 'required'
+
+        ]);
 
 
         $message = new Message;
@@ -31,4 +37,5 @@ class MessageController extends Controller
 //        return redirect('/homepage');
 
     }
+
 }
