@@ -62,7 +62,7 @@
         </div><!-- /.container-fluid -->
     </nav>
 
-    @yield('content')
+@yield('content')
 
 
     <footer class="footer bg-white">
