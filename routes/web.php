@@ -14,6 +14,7 @@
 use App\Barber;
 use App\BookingSlots;
 use App\BookingType;
+use App\Message;
 
 //Routes::get('logout',array('user' => 'HomeController@doLogout'));
 Route::get('/', function () {
@@ -55,7 +56,7 @@ Route::post('/barber', 'BookingController@getBarber');
 Route::get('view-records','appointmentcontroller@index');
 
 
-Route::resource('messages','MessageController');
+// Route::resource('/showmessage','MessageController@index');
 Route::resource('admin','adminController');
 
 
@@ -69,13 +70,14 @@ Route::get('/newbarber', function () {
 Route::get('/newblog', function () {
     return view('newblog');
 });
-Route::get('/messages', function () {
-    return view('messages');
+Route::get('/message', function () {
+    
+    $messages=Message::all();
+    return view('message',compact('messages'));
 });
 Route::get('/booking', function () {
     return view('booking');
 });
-
 Route::get('/homepage', function () {
     return view('homepage');
 });

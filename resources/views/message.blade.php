@@ -22,7 +22,7 @@
      </div>
     </div>
                     
-</br>
+    </br>
                     @endforeach
                     @else
                          <p>No messages found</p>
