@@ -3,15 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdminController extends Controller
 {
-    public function __construct()
+    public function index()
     {
-        $this->middleware('auth');
-    }
-    public function admin()
-    {
-        return view('barber');
+        
+        return view('admin');
     }
 }

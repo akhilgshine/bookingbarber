@@ -1,30 +1,36 @@
-<!-- app/views/admin.blade.php --><
 
-<!doctype html>
-<html>
-<head>
-<title>Look at me Login</title>
-</head>
-<body><
 
-{{ Form::open(array('url' => 'appointment_view')) }}
-<h1>Login</h1>
+@extends('layout.app')
+@section('content')
 
-<!-- if there are login errors, show them here -->
-<p>
-    {{ $errors->first('user_name') }}
-    {{ $errors->first('password') }}
-</p>
+    <div class="row">
+      <div class="container" style="margin-top: 85px; margin-bottom: 85px;">
+            <h1 class="text-center">
+                    Only For Admins
+                  </h1> 
+                  
+                   
+                             
+                   
+                    <div class="card" style="width: 100rem;">
+                    <div class="card mt-2 mb-3 green">
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><h1><a href="{{url('/newbarber')}}">Add New Barber</a></h1></li>
+                        <li class="list-group-item"><h1><a href="{{url('/newblog')}}" >Add Blog</a></h1></li>
+                        <li class="list-group-item"><h1><a href="{{url('/messages')}}">View Messages</a></h1></li>
+                        <li class="list-group-item"> <h1><a href="{{url('/booking')}}" >View Appointments</h1></li>
+                        <li class="list-group-item"> <h1><a href="{{url('/homepage')}}" target="_blank">Logout</h1></li>
+                    </ul>
+                    </div>
+        </div>
+                    
 
-<p>
-    {{ Form::label('user_name', 'User Name') }}
-    {{ Form::text('user_name', Input::old('user_name') }}
-</p>
-
-<p>
-    {{ Form::label('password', 'Password') }}
-    {{ Form::password('password') }}
-</p>
-
-<p>{{ Form::submit('Submit!') }}</p>
-{{ Form::close() }}
+                    
+                            
+                       
+                                             
+        </div>
+        </div>
+    </div>
+  
+ @endsection

@@ -54,17 +54,28 @@ Route::post('/barber', 'BookingController@getBarber');
 
 Route::get('view-records','appointmentcontroller@index');
 
-Route::get('/addbarber', function () {
-    return view('addbarber');
+
+Route::resource('messages','MessageController');
+Route::resource('admin','adminController');
+
+
+Route::resource('bookings','BookingController');
+
+
+Route::post('/insert','newBarberController@insert');
+Route::get('/newbarber', function () {
+    return view('newbarber');
+});
+Route::get('/newblog', function () {
+    return view('newblog');
+});
+Route::get('/messages', function () {
+    return view('messages');
+});
+Route::get('/booking', function () {
+    return view('booking');
 });
 
-
-Route::post('/barber/submit','AddBarber@submit');
-
-Route::get('/adminpage', function () {
-    return view('adminhome');
+Route::get('/homepage', function () {
+    return view('homepage');
 });
-
-Route::get('/adminhome', 'AdminController@admin')
-    ->middleware('is_admin')
-    ->name('admin');

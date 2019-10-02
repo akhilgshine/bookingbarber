@@ -54,4 +54,14 @@ class BookingController extends Controller
             ->first();
         return $data;
     }
+    public function index()
+    {
+        $bookings=Booking::all();
+        return view('bookings.booking')->with('bookings',$bookings);
+    }
+    public function show($id)
+    {
+        $booking= Booking::find($id);
+        return view('bookings.show')->with('booking',$booking);
+    }
 }
