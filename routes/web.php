@@ -53,3 +53,16 @@ Route::post('/barber', 'BookingController@getBarber');
 
 
 Route::get('view-records','appointmentcontroller@index');
+
+Route::get('/addbarber', function () {
+    return view('addbarber');
+});
+
+
+Route::post('/barber/submit','AddBarber@submit');
+
+
+
+Route::get('/adminhome', 'AdminController@admin')
+    ->middleware('is_admin')
+    ->name('admin');
