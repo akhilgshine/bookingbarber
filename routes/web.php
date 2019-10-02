@@ -61,7 +61,9 @@ Route::get('/addbarber', function () {
 
 Route::post('/barber/submit','AddBarber@submit');
 
-
+Route::get('/adminpage', function () {
+    return view('adminhome');
+});
 
 Route::get('/adminhome', 'AdminController@admin')
     ->middleware('is_admin')
