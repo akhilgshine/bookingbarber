@@ -8,6 +8,7 @@ use App\Message;
 
 class MessageController extends Controller
 {
+    
     public function submit(Request $request){
 
 
@@ -38,4 +39,14 @@ class MessageController extends Controller
 
     }
 
+    public function index()
+    {
+        $messages=Message::all();
+        return view('message')->with('messages',$messages);
+    }
+    public function show($id)
+    {
+        $message= Message::find($id);
+        return view('show')->with('message',$message);
+    }
 }
