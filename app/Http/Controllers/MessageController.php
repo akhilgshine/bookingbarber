@@ -41,12 +41,10 @@ class MessageController extends Controller
 
     public function index()
     {
-        $messages=Message::all();
-        return view('message')->with('messages',$messages);
     }
     public function show($id)
     {
         $message= Message::find($id);
-        return view('show')->with('message',$message);
+        return view('messages.show')->with('message','$message');
     }
 }
