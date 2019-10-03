@@ -49,6 +49,7 @@
       <div class="container" style="margin-top: 85px; margin-bottom: 85px;">
             <h1 class="text-center">Messages</h1> 
                   
+
                    @if(count($messages)> 0 )
                     @foreach($messages as $message)
                     <div class="card" style="width: 100rem;">

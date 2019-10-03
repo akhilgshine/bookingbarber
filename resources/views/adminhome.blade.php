@@ -36,10 +36,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navtheme navbar-nav navbar-right">
-                    <li><a href="{{url('message')}}">Messages</a></li>
-                    <li><a href="{{url('addbarber')}}">Add Barber</a></li>
-
-
+                    <li><a href="{{url('book')}}">Booking</a></li>
+                    <li><a href="{{url('contact-us')}}">Contact</a></li>
                 </ul>
             </div>
         </div>

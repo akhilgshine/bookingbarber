@@ -74,6 +74,7 @@ Route::get('/message', function () {
     $messages = Message::all();
     return view('message', compact('messages'));
 
+
 });
 Route::get('/booking', function () {
 
