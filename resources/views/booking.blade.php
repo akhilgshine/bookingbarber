@@ -5,7 +5,7 @@
       <div class="container" style="margin-top: 85px; margin-bottom: 85px;">
             <h1 class="text-center">Bookings</h1> 
 
-    @if(count($bookings)> 1 )
+    @if(count($bookings)> 0 )
         @foreach($bookings as $booking)
         <div class="card" style="width: 100rem;">
                     <div class="card mt-2 mb-3 green">

@@ -15,8 +15,8 @@ use App\Barber;
 use App\BookingSlots;
 use App\BookingType;
 use App\Message;
+use App\Booking;
 
-//Routes::get('logout',array('user' => 'HomeController@doLogout'));
 Route::get('/', function () {
     return view('homepage');
 });
@@ -51,33 +51,40 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::post('/barber', 'BookingController@getBarber');
+Route::post('/barber/submit', 'AddBarber@submit');
 
 
-Route::get('view-records','appointmentcontroller@index');
 
 
-// Route::resource('/showmessage','MessageController@index');
 Route::resource('admin','adminController');
 
 
 Route::resource('bookings','BookingController');
 
 
-Route::post('/insert','newBarberController@insert');
-Route::get('/newbarber', function () {
-    return view('newbarber');
+Route::get('/addbarber', function () {
+    $barbers = Barber::all();
+    return view('addbarber', compact('barbers'));
 });
 Route::get('/newblog', function () {
     return view('newblog');
 });
 Route::get('/message', function () {
-    
-    $messages=Message::all();
-    return view('message',compact('messages'));
+
+    $messages = Message::all();
+    return view('message', compact('messages'));
+
 });
 Route::get('/booking', function () {
-    return view('booking');
+
+    $bookings = Booking::all();
+    return view('booking', compact('bookings'));
 });
 Route::get('/homepage', function () {
     return view('homepage');
+});
+
+
+Route::get('/adminhome', function () {
+    return view('adminhome');
 });

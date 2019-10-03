@@ -26,7 +26,6 @@ class AddBarber extends Controller
         $barber->save();
 
         return redirect()->back()->with('message', 'Barber Added Successfully!');
-//        return redirect('/homepage');
 
     }
 }
