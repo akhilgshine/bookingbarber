@@ -16,6 +16,7 @@ use App\BookingSlots;
 use App\BookingType;
 use App\Message;
 use App\Booking;
+use App\Blog;
 
 Route::get('/', function () {
     return view('homepage');
@@ -74,7 +75,6 @@ Route::get('/message', function () {
     $messages = Message::all();
     return view('message', compact('messages'));
 
-
 });
 Route::get('/booking', function () {
 
@@ -88,4 +88,16 @@ Route::get('/homepage', function () {
 
 Route::get('/adminhome', function () {
     return view('adminhome');
+});
+Route::get('/newblog', function()
+{
+    return view('newblog');
+});
+Route::post('/newblog/submit','NewBlogController@submit');
+
+Route::get('/blog', function () {
+
+    $blogs = Blog::all();
+    return view('blog', compact('blogs'));
+
 });
