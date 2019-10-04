@@ -39,12 +39,5 @@ class MessageController extends Controller
 
     }
 
-    public function index()
-    {
-    }
-    public function show($id)
-    {
-        $message= Message::find($id);
-        return view('messages.show')->with('message','$message');
-    }
+   
 }
