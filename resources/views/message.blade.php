@@ -38,8 +38,6 @@
                 <ul class="nav navtheme navbar-nav navbar-right">
                     <li><a href="{{url('message')}}">Messages</a></li>
                     <li><a href="{{url('addbarber')}}">Add Barber</a></li>
-                    <li><a href="{{url('newblog')}}">Add Blog</a></li>
-                    <li><a href="{{url('/homepage')}}">Logout</a></li>
 
 
                 </ul>
@@ -51,6 +49,7 @@
       <div class="container" style="margin-top: 85px; margin-bottom: 85px;">
             <h1 class="text-center">Messages</h1> 
                   
+
                    @if(count($messages)> 0 )
                     @foreach($messages as $message)
                     <div class="card" style="width: 100rem;">

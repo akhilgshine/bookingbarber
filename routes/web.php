@@ -67,9 +67,8 @@ Route::get('/addbarber', function () {
     $barbers = Barber::all();
     return view('addbarber', compact('barbers'));
 });
-Route::get('/newblog', function () {
-    return view('newblog');
-});
+
+
 Route::get('/message', function () {
 
     $messages = Message::all();
@@ -95,9 +94,14 @@ Route::get('/newblog', function()
 });
 Route::post('/newblog/submit','NewBlogController@submit');
 
+
 Route::get('/blog', function () {
 
     $blogs = Blog::all();
     return view('blog', compact('blogs'));
 
 });
+Route::get('/addbooktype', function () {
+    return view('addbooktype');
+});
+Route::post('/addbooktype/submit','AddBookTypeController@submit');

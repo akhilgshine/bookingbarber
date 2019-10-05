@@ -44,19 +44,19 @@
                     <div class="col-sm-6">
                             
     
-                        {{ Form::open(array('url' => 'newblog/submit')) }}
+                        {{ Form::open(array('url' => 'addbooktype/submit')) }}
                         <div class="form-group">
-                        <label> Title</label>
-                        {{Form::text('title','',['class'=>'form-control','placeholder'=>'Enter Title'])}}
+                        <label> Type</label>
+                        {{Form::text('type','',['class'=>'form-control','placeholder'=>'Enter Type'])}}
                         </div>
                         <div class="form-group">
-                        <label> Choose Image</label>
-                        <input id="image" type="file" class="form-control" name="image">
+                        <label> Cost</label>
+                        {{Form::text('cost','',['class'=>'form-control','placeholder'=>'Enter cost'])}}
                          
                          </div>
                           <div class="form-group">
-                        <label> Description</label>
-                        {{Form::textarea('description','',['class'=>'form-control','placeholder'=>'Enter Description'])}}
+                        <label> Duration</label>
+                        {{Form::number('duration','',['class'=>'form-control','placeholder'=>'Enter Duration'])}}
                         </div>  
                         {{Form::submit('Submit',['class'=>'btn btn-theme'])}}
                         {{ Form::close() }}   

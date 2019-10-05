@@ -38,9 +38,6 @@
                 <ul class="nav navtheme navbar-nav navbar-right">
                     <li><a href="{{url('message')}}">Messages</a></li>
                     <li><a href="{{url('addbarber')}}">Add Barber</a></li>
-                    <li><a href="{{url('newblog')}}">Add Blog</a></li>
-                    <li><a href="{{url('/homepage')}}">Logout</a></li>
-                   
 
 
                 </ul>
@@ -57,10 +54,10 @@
                 <i class="fa fa-cut"></i>
             </div>
             <div class="row">
-                 <!-- @foreach($barbers as $barber )
+                @foreach($barbers as $barber )
                     {{$barber}}
 
-                    @endforeach  -->
+                    @endforeach
 
 
                 <div class="col-sm-8">
