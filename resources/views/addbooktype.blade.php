@@ -39,6 +39,17 @@
                   <div class="text-muted text-center" style="margin-bottom: 35px;">
                     <i class="fa fa-cut"></i>
                   </div>
+
+          @if(session()->has('addbooktype'))
+              <div class="alert alert-success">
+                  {{ session()->get('addbooktype') }}
+              </div>
+          @endif
+          @if($errors->any())
+              <div class="alert alert-danger">
+                  <h4>{{$errors->first()}}</h4>
+              </div>
+          @endif
             <div class="row">
                    
                     <div class="col-sm-6">

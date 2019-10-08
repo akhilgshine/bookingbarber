@@ -34,8 +34,19 @@
                 </div>
             </nav>
             <h1 class="text-center">
-                Only For admin
+               Add Blog
             </h1>
+
+            @if(session()->has('newblog'))
+                <div class="alert alert-success">
+                    {{ session()->get('newblog') }}
+                </div>
+            @endif
+            @if($errors->any())
+                <div class="alert alert-danger">
+                    <h4>{{$errors->first()}}</h4>
+                </div>
+            @endif
             <div class="text-muted text-center" style="margin-bottom: 35px;">
                 <i class="fa fa-cut"></i>
             </div>
