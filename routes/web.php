@@ -23,9 +23,9 @@ Route::get('/', function () {
 });
 
 Route::get('/services', function () {
-    $type = BookingType::all();
+    $types = BookingType::all();
 
-    return view('service',compact('type'));
+    return view('service',compact('types'));
 });
 Route::get('/contact-us', function () {
     return view('contact_us');
