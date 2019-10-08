@@ -57,9 +57,10 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item"><h1><a href="{{url('/addbarber')}}">Add New Barber</a></h1></li>
                         <li class="list-group-item"><h1><a href="{{url('/newblog')}}" >Add Blog</a></h1></li>
-                        <li class="list-group-item"><h1><a href="{{url('/messages')}}">View Messages</a></h1></li>
-                        <li class="list-group-item"> <h1><a href="{{url('/booking')}}" >View Appointments</h1></li>
-                        <li class="list-group-item"> <h1><a href="{{url('/homepage')}}" target="_blank">Logout</h1></li>
+                        <li class="list-group-item"><h1><a href="{{url('/message')}}">View Messages</a></h1></li>
+                        <li class="list-group-item"> <h1><a href="{{url('/booking')}}" >View Appointments</a></h1></li>
+                        <li class="list-group-item"> <h1><a href="{{url('/addbooktype')}}" >Add Booking Type</a></h1></li>
+                        <li class="list-group-item"> <h1><a href="{{url('/homepage')}}" target="_blank">Logout</a></h1></li>
                     </ul>
                 </div>
             </div>

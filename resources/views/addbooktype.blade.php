@@ -34,8 +34,8 @@
         </div>
     </nav>
             <h1 class="text-center">
-                    Only For admin
-                  </h1> 
+                    Add Booking Type
+                  </h1>
                   <div class="text-muted text-center" style="margin-bottom: 35px;">
                     <i class="fa fa-cut"></i>
                   </div>
@@ -56,7 +56,7 @@
                          </div>
                           <div class="form-group">
                         <label> Duration</label>
-                        {{Form::number('duration','',['class'=>'form-control','placeholder'=>'Enter Duration'])}}
+                        {{Form::text('duration','',['class'=>'form-control','placeholder'=>'Enter Duration'])}}
                         </div>  
                         {{Form::submit('Submit',['class'=>'btn btn-theme'])}}
                         {{ Form::close() }}   
