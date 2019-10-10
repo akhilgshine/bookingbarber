@@ -39,6 +39,7 @@
                     <li><a href="{{url('/addbarber')}}">Add New Barber</a></li>
                     <li><a href="{{url('/newblog')}}" >Add Blog</a></li>
                     <li><a href="{{url('/logout')}}" >Log Out</a></li>
+                    <li><a href="{{url('/booking')}}" >View Appointments</a></li>
 
                 </ul>
             </div>

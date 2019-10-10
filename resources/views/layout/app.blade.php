@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="Css/DesignStyle.css" />
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--------------------------- /STYLESHEETS ----------------------------->
     <title>BARBERZ</title>
@@ -70,7 +72,17 @@
 
     <footer class="footer bg-white">
         <div class="col-sm-12">
-            <p class="text-center" style="margin: 0px;">Copyright 2019 Barberz | Bookings 07 856 7908 email</p>
+
+
+
+            <!-- Add font awesome icons -->
+
+            <p class="text-center" style="margin: 0px;">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagran"></a>
+
+                Copyright 2019 Barberz | Bookings 07 856 7908 email</p>
         </div>
     </footer>
 </div>
