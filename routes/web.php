@@ -17,7 +17,6 @@ use App\BookingType;
 use App\Message;
 use App\Booking;
 use App\Blog;
-
 Route::get('/', function () {
     return view('homepage');
 });
@@ -105,3 +104,6 @@ Route::get('/addbooktype', function () {
     return view('addbooktype');
 });
 Route::post('/addbooktype/submit','AddBookTypeController@submit');
+
+
+Route::get('logout', 'Auth\LoginController@logout');

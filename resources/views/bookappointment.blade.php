@@ -3,8 +3,8 @@
     <div class="container main-container">
         <div class="row">
             <div class="col-sm-12 bg-white" style="margin-bottom: 15px; padding-bottom: 20px;">
-                <img src="/Images/banner-massages.jpg" class="img-responsive" alt="banner"
-                     style="padding-top: 15px; margin-bottom: 15px; " />
+{{--                <img src="/Images/banner-massages.jpg" class="img-responsive" alt="banner"--}}
+{{--                     style="padding-top: 15px; margin-bottom: 15px; " />--}}
                 <h3 class="text-center">Book Now</h3>
                 @if(session()->has('success'))
                     <div class="alert alert-success">

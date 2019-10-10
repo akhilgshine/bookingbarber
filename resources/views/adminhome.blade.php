@@ -36,8 +36,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navtheme navbar-nav navbar-right">
-                    <li><a href="{{url('book')}}">Booking</a></li>
-                    <li><a href="{{url('contact-us')}}">Contact</a></li>
+                    <li><a href="{{url('/addbarber')}}">Add New Barber</a></li>
+                    <li><a href="{{url('/newblog')}}" >Add Blog</a></li>
+                    <li><a href="{{url('/logout')}}" >Log Out</a></li>
+
                 </ul>
             </div>
         </div>
@@ -46,7 +48,7 @@
     <div class="row">
         <div class="container" style="margin-top: 85px; margin-bottom: 85px;">
             <h1 class="text-center">
-                Only For Admins
+                Welcome Admin
             </h1>
 
 
@@ -60,7 +62,6 @@
                         <li class="list-group-item"><h1><a href="{{url('/message')}}">View Messages</a></h1></li>
                         <li class="list-group-item"> <h1><a href="{{url('/booking')}}" >View Appointments</a></h1></li>
                         <li class="list-group-item"> <h1><a href="{{url('/addbooktype')}}" >Add Booking Type</a></h1></li>
-                        <li class="list-group-item"> <h1><a href="{{url('/homepage')}}" target="_blank">Logout</a></h1></li>
                     </ul>
                 </div>
             </div>
