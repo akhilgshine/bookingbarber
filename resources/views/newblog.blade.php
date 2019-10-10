@@ -54,8 +54,7 @@
 
                 <div class="col-sm-6">
 
-
-                    {{ Form::open(array('url' => 'newblog/submit')) }}
+                    {{ Form::open(array('url' => 'newblog/submit','enctype'=>'multipart/form-data')) }}
                     <div class="form-group">
                         <label> Title</label>
                         {{Form::text('title','',['class'=>'form-control','placeholder'=>'Enter Title'])}}

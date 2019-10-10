@@ -20,7 +20,7 @@
                         <div class="col-sm-4 blog-item">
                             <div class="bg-white">
                             <!-- <div class="img-responsive">{{$blog->image}}</div> -->
-                                <img id="image" src="{{URL::asset('Images/'.$blog->image)}}"/>
+                                <img id="image" src="{{URL::asset('Images/'.$blog->image)}}" style="height: 400px" width="100px"/>
                                 <div class="p-1">
                                     <a href="javascript: void(0);"><h1>{{$blog->title}}</h1></a>
 
