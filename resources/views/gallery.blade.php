@@ -22,7 +22,6 @@
             </div>
             <div class="row">
                 <h1 class="text-center">
-                    Our Hairstyles
                 </h1>
                 <div class="text-muted text-center" style="margin-bottom: 35px;">
                     <i class="fa fa-cut"></i>

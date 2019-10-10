@@ -56,7 +56,7 @@ Route::post('/barber/submit', 'AddBarber@submit');
 
 
 
-Route::resource('admin','adminController');
+//Route::resource('admin','adminController');
 
 
 Route::resource('bookings','BookingController');
